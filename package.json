@@ -4,15 +4,19 @@
   "description": "Crypto asset CLI",
   "main": "index.js",
   "bin": {
-    "septha": "bin/septha.js"
+    "septha": "dist/bin/septha.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf dist && npx tsc"
   },
   "keywords": [
     "node",
     "cli"
   ],
   "author": "Solomon Igori",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
 }
