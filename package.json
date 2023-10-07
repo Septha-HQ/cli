@@ -1,18 +1,29 @@
 {
   "name": "septha",
+  "type": "module",
   "version": "1.0.0",
   "description": "Crypto asset CLI",
   "main": "index.js",
   "bin": {
-    "septha": "bin/septha.js"
+    "septha": "dist/bin/septha.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf dist && npx tsc && chmod +x dist/bin/septha.js"
   },
   "keywords": [
     "node",
     "cli"
   ],
   "author": "Solomon Igori",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.8.2",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "commander": "^11.0.0",
+    "configstore": "^6.0.0",
+    "inquirer": "^9.2.11"
+  }
 }
