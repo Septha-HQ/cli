@@ -1,3 +1,8 @@
 #!/usr/bin/env node
 
-console.log("Hello Earthlingsssss");
+import { program } from "commander";
+import pkg from "../package.json" assert { type: 'json' };
+
+program
+    .version(pkg.version, "-v, --version")
+    .parse(process.argv);
