@@ -1,12 +1,12 @@
 {
   "compilerOptions": {
-    "module": "ESNext",
+    "module": "NodeNext",
     "esModuleInterop": true,
-    "target": "ES2021",
+    "target": "ESNext",
     "resolveJsonModule": true,
-    "moduleResolution": "node",
+    "moduleResolution": "NodeNext",
     "sourceMap": false,
-    "outDir": "dist"
+    "outDir": "dist",
+    "strict": true,
   },
-  "lib": ["es2021"]
 }
