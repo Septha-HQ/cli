@@ -6,6 +6,9 @@ const logger = {
     },
     error: (message: string) => {
         console.log(colors.red(message));
+    },
+    output: (message: string) => {
+        console.log(colors.blue(message));
     }
 }
 
