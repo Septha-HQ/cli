@@ -1,5 +1,5 @@
 {
-  "name": "septha",
+  "name": "septha-cli",
   "type": "module",
   "version": "1.0.0",
   "description": "Crypto asset CLI",
@@ -9,7 +9,11 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -rf dist && npx tsc && chmod +x dist/bin/septha.js"
+    "watch": "tsc --watch",
+    "permit": "chmod +x dist/bin/septha.js",
+    "copy-files": "cp ./package.json ./dist/",
+    "build": "rm -rf dist && npx tsc",
+    "start": "npm run build && npm run copy-files && npm run permit && npm link && npm run watch"
   },
   "keywords": [
     "node",
@@ -18,12 +22,16 @@
   "author": "Solomon Igori",
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^20.8.2",
+    "@types/configstore": "^6.0.0",
+    "@types/node": "^20.8.3",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.2.2"
   },
   "dependencies": {
+    "@colors/colors": "^1.6.0",
+    "@inquirer/prompts": "^3.2.0",
+    "axios": "^1.5.1",
     "commander": "^11.0.0",
-    "configstore": "^6.0.0",
-    "inquirer": "^9.2.11"
+    "configstore": "^6.0.0"
   }
 }
